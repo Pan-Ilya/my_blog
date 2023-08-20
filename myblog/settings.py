@@ -115,6 +115,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -139,18 +140,16 @@ CKEDITOR_CONFIGS = {
         'toolbar_Full': [
             ['Styles', 'Format', 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-',
              'RemoveFormat'],
-            ['Image', 'Flash', 'Table', 'HorizontalRule'],
+            ['Image', 'Table', 'HorizontalRule'],
             ['TextColor', 'BGColor'],
             ['Smiley', 'sourcearea', 'SpecialChar'],
             ['Link', 'Unlink', 'Anchor'],
-            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
-             'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', 'Language'],
-            ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates'],
-            ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'],
-            ['Find', 'Replace', '-', 'SelectAll', '-', 'Scayt'],
-            ['Maximize', 'ShowBlocks']
+            ['NumberedList', 'BulletedList', '-', '-', 'Blockquote', 'CreateDiv', '-',
+             'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock',],
+            # ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates'],
+            # ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'],
+            # ['Find', 'Replace', '-', 'SelectAll', '-', 'Scayt']
         ],
     }
 }
 
-###################################
