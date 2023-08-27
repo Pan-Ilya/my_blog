@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<body>
+
+    {% for p in posts %}
+    <h1>{{ p.h1 }}</h1>
+    <h2>{{ p.title }}</h2>
+    {{ p.content|safe }}
+    {% endfor %}
+
+
+</body>
+</html>

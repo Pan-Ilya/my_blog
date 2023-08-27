@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views import View
+from .templates import *
 from .models import *
 
 
@@ -10,4 +11,4 @@ from .models import *
 class MainPageView(View):
     def get(self, request):
         data = Post.objects.all()
-        return HttpResponse(data)
+        return render(request, 'blog/index.html', {'posts': data})
