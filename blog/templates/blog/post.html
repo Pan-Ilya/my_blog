@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>{{ post.title }}</h1>
+    {{ post.content|safe }}
+    <br>
+    <img src="{{ post.image.url }}" width="550">
+    <br>
+    <a href="{% url 'home' %}">Назад</a>
+    <br>
+
+
+</body>
+</html>
